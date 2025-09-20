@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #ffe6f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card {
+  text-align: center;
+  background: #fff0f5;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.card h1 {
+  font-size: 2.5em;
+  color: #ff3399;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.card p {
+  font-size: 1.2em;
+  color: #333;
+  margin: 20px 0;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s;
+}
+
+.card img {
+  width: 250px;
+  border-radius: 15px;
+  opacity: 0;
+  animation: fadeIn 2s forwards 4s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Simple confetti dots */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(700px) rotate(360deg); }
+}
